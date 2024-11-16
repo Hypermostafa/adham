@@ -20,7 +20,7 @@ namespace GamalCenter
     /// </summary>
     public partial class LogInPage : Page
     {
-        GamalCenterEntities db = new GamalCenterEntities();
+        GamalCenterEntitiesEntities db = new GamalCenterEntitiesEntities();
         public LogInPage()
         {
             InitializeComponent();
@@ -32,19 +32,26 @@ namespace GamalCenter
         }
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+
+
             if(string.IsNullOrWhiteSpace(usertxt.Text))
             {
                 MessageBox.Show("Please Enter Username");
             }
+
             else if (string.IsNullOrWhiteSpace(passtxt.Text))
             {
                 MessageBox.Show("Please Enter Password");
             }
+
+
             else if(usertxt.Text == "admin" && passtxt.Text == "12345")
             {
                 MessageBox.Show("admin !! \nwelcome back");
                 this.NavigationService.Navigate(new adminPage());
             }
+
+
             else
             {
                 var log = db.logindets.Where(x => x.username == usertxt.Text)

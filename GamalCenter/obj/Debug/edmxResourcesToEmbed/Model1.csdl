@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="GamalCenterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="GamalCenterEntitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Cours">
     <Key>
       <PropertyRef Name="Courses_ID" />
@@ -8,8 +8,8 @@
     <Property Name="Courses_Grade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Courses_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Courses_price" Type="Int32" />
-    <NavigationProperty Name="students" Relationship="Self.FK__student__Courses__40F9A68C" FromRole="Courses" ToRole="student" />
-    <NavigationProperty Name="students1" Relationship="Self.FK__student__Courses__41EDCAC5" FromRole="Courses" ToRole="student" />
+    <NavigationProperty Name="students" Relationship="Self.FK__student__Courses__3C69FB99" FromRole="Courses" ToRole="student" />
+    <NavigationProperty Name="students1" Relationship="Self.FK__student__Courses__3D5E1FD2" FromRole="Courses" ToRole="student" />
   </EntityType>
   <EntityType Name="logindet">
     <Key>
@@ -30,10 +30,10 @@
     <Property Name="Student_phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Courses_name" Type="Int32" />
     <Property Name="Courses_Grade" Type="Int32" />
-    <NavigationProperty Name="Cours" Relationship="Self.FK__student__Courses__40F9A68C" FromRole="student" ToRole="Courses" />
-    <NavigationProperty Name="Cours1" Relationship="Self.FK__student__Courses__41EDCAC5" FromRole="student" ToRole="Courses" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK__student__Courses__3C69FB99" FromRole="student" ToRole="Courses" />
+    <NavigationProperty Name="Cours1" Relationship="Self.FK__student__Courses__3D5E1FD2" FromRole="student" ToRole="Courses" />
   </EntityType>
-  <Association Name="FK__student__Courses__40F9A68C">
+  <Association Name="FK__student__Courses__3C69FB99">
     <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
     <End Role="student" Type="Self.student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -45,7 +45,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__student__Courses__41EDCAC5">
+  <Association Name="FK__student__Courses__3D5E1FD2">
     <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
     <End Role="student" Type="Self.student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -57,15 +57,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GamalCenterEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="GamalCenterEntitiesEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Courses" EntityType="Self.Cours" />
     <EntitySet Name="logindets" EntityType="Self.logindet" />
     <EntitySet Name="students" EntityType="Self.student" />
-    <AssociationSet Name="FK__student__Courses__40F9A68C" Association="Self.FK__student__Courses__40F9A68C">
+    <AssociationSet Name="FK__student__Courses__3C69FB99" Association="Self.FK__student__Courses__3C69FB99">
       <End Role="Courses" EntitySet="Courses" />
       <End Role="student" EntitySet="students" />
     </AssociationSet>
-    <AssociationSet Name="FK__student__Courses__41EDCAC5" Association="Self.FK__student__Courses__41EDCAC5">
+    <AssociationSet Name="FK__student__Courses__3D5E1FD2" Association="Self.FK__student__Courses__3D5E1FD2">
       <End Role="Courses" EntitySet="Courses" />
       <End Role="student" EntitySet="students" />
     </AssociationSet>

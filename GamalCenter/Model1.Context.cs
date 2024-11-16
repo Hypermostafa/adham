@@ -13,10 +13,10 @@ namespace GamalCenter
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GamalCenterEntities : DbContext
+    public partial class GamalCenterEntitiesEntities : DbContext
     {
-        public GamalCenterEntities()
-            : base("name=GamalCenterEntities")
+        public GamalCenterEntitiesEntities()
+            : base("name=GamalCenterEntitiesEntities")
         {
         }
     

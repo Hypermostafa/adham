@@ -20,7 +20,7 @@ namespace GamalCenter
     /// </summary>
     public partial class SignupPage : Page
     {
-        GamalCenterEntities db = new GamalCenterEntities(); 
+        GamalCenterEntitiesEntities db = new GamalCenterEntitiesEntities(); 
         public SignupPage()
         {
             InitializeComponent();

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="GamalCenterModelStoreContainer" CdmEntityContainer="GamalCenterEntities">
+  <EntityContainerMapping StorageEntityContainer="GamalCenterEntitiesModelStoreContainer" CdmEntityContainer="GamalCenterEntitiesEntities">
     <EntitySetMapping Name="Courses">
-      <EntityTypeMapping TypeName="GamalCenterModel.Cours">
+      <EntityTypeMapping TypeName="GamalCenterEntitiesModel.Cours">
         <MappingFragment StoreEntitySet="Courses">
           <ScalarProperty Name="Courses_ID" ColumnName="Courses_ID" />
           <ScalarProperty Name="Courses_Grade" ColumnName="Courses_Grade" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="logindets">
-      <EntityTypeMapping TypeName="GamalCenterModel.logindet">
+      <EntityTypeMapping TypeName="GamalCenterEntitiesModel.logindet">
         <MappingFragment StoreEntitySet="logindet">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="username" ColumnName="username" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="students">
-      <EntityTypeMapping TypeName="GamalCenterModel.student">
+      <EntityTypeMapping TypeName="GamalCenterEntitiesModel.student">
         <MappingFragment StoreEntitySet="student">
           <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
           <ScalarProperty Name="Student_name" ColumnName="Student_name" />

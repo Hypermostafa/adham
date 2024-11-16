@@ -21,7 +21,7 @@ namespace GamalCenter
     /// </summary>
     public partial class ModifyPage : Page
     {
-        GamalCenterEntities db = new GamalCenterEntities();
+        GamalCenterEntitiesEntities db = new GamalCenterEntitiesEntities();
         public ModifyPage()
         {
             InitializeComponent();

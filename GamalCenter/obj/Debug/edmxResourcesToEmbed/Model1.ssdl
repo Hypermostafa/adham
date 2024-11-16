@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="GamalCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="GamalCenterEntitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Courses">
     <Key>
       <PropertyRef Name="Courses_ID" />
@@ -29,7 +29,7 @@
     <Property Name="Courses_name" Type="int" />
     <Property Name="Courses_Grade" Type="int" />
   </EntityType>
-  <Association Name="FK__student__Courses__40F9A68C">
+  <Association Name="FK__student__Courses__3C69FB99">
     <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
     <End Role="student" Type="Self.student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -41,7 +41,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__student__Courses__41EDCAC5">
+  <Association Name="FK__student__Courses__3D5E1FD2">
     <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
     <End Role="student" Type="Self.student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -53,15 +53,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GamalCenterModelStoreContainer">
+  <EntityContainer Name="GamalCenterEntitiesModelStoreContainer">
     <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="logindet" EntityType="Self.logindet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__student__Courses__40F9A68C" Association="Self.FK__student__Courses__40F9A68C">
+    <AssociationSet Name="FK__student__Courses__3C69FB99" Association="Self.FK__student__Courses__3C69FB99">
       <End Role="Courses" EntitySet="Courses" />
       <End Role="student" EntitySet="student" />
     </AssociationSet>
-    <AssociationSet Name="FK__student__Courses__41EDCAC5" Association="Self.FK__student__Courses__41EDCAC5">
+    <AssociationSet Name="FK__student__Courses__3D5E1FD2" Association="Self.FK__student__Courses__3D5E1FD2">
       <End Role="Courses" EntitySet="Courses" />
       <End Role="student" EntitySet="student" />
     </AssociationSet>
